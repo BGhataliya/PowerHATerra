@@ -24,14 +24,14 @@ variable "cloud_instance_id" {
 variable "image_name" {
   description = "Name of the image to be used"
   type        = string
-  default     = "7200-05-03"
+  default     = "7300-01-02"
 }
 
 // Instance
 variable "instance_name" {
   description = "Name of the instance"
   type        = string
-  default     = "powervs-terra-1"
+  default     = "powervs-terra-2"
 }
 variable "memory" {
   description = "Instance memory"
