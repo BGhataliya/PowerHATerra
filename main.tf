@@ -67,18 +67,18 @@ resource "ibm_pi_volume_attach" "volume_attach" {
 #   }
 # }
 
-resource "terraform_data" "OnPremise" {
-  connection {
-    type             = "ssh"
-    user             = "root"
-    host             = "172.16.118.88"
-    password         = "Ar1cent@123"
-    agent            = false
-    timeout          = "60m"
-  }
+# resource "terraform_data" "OnPremise" {
+#   connection {
+#     type             = "ssh"
+#     user             = "root"
+#     host             = "172.16.118.88"
+#     password         = "Ar1cent@123"
+#     agent            = false
+#     timeout          = "60m"
+#   }
 
-  provisioner "remote-exec" {
-    inline = ["export PATH=$PATH:/usr/es/sbin/cluster/utilities/", "cd /.ansible/collections/ansible_collections/ibm/power_ha/playbooks", "/opt/freeware/bin/ansible-playbook demo_PowerHA.yml --tags uninstall"]
-  }
-}
+#   provisioner "remote-exec" {
+#     inline = ["export PATH=$PATH:/usr/es/sbin/cluster/utilities/", "cd /.ansible/collections/ansible_collections/ibm/power_ha/playbooks", "/opt/freeware/bin/ansible-playbook demo_PowerHA.yml --tags uninstall"]
+#   }
+# }
 
