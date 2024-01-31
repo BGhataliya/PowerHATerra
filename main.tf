@@ -41,13 +41,13 @@ data "ibm_pi_instance" "data_source_instance" {
   pi_cloud_instance_id = var.cloud_instance_id
   pi_instance_name     = var.instance_name
 }
-resource "ibm_pi_volume_attach" "attach_powervs_terr_hdiks1" {
-  depends_on = [ibm_pi_instance.instance, ibm_pi_volume.volume]
+# resource "ibm_pi_volume_attach" "attach_powervs_terr_hdiks1" {
+#   depends_on = [ibm_pi_instance.instance, ibm_pi_volume.volume]
 
-  pi_cloud_instance_id = var.cloud_instance_id
-  pi_volume_id         = data.ibm_pi_volume.data_source_volume.id
-  pi_instance_id       = data.ibm_pi_instance.data_source_instance.id
-}
+#   pi_cloud_instance_id = var.cloud_instance_id
+#   pi_volume_id         = data.ibm_pi_volume.data_source_volume.id
+#   pi_instance_id       = data.ibm_pi_instance.data_source_instance.id
+# }
 
 # resource "terraform_data" "onPrim_node" {
 #   connection {
