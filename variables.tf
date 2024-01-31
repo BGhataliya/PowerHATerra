@@ -80,7 +80,7 @@ variable "network_count" {
 variable "volume_name" {
   description = "Name of the volume"
   type        = string
-  default     = "hdisk3"
+  default     = "poworvs-terra-hdisk1"
 }
 variable "volume_size" {
   description = "Size of a volume"
