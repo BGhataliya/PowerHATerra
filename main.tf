@@ -7,16 +7,16 @@ data "ibm_pi_network" "data_source_network" {
   pi_network_name      = "VPNsubnet4"
   pi_cloud_instance_id = var.cloud_instance_id
 }
-# resource "ibm_pi_volume" "volume" {
-#   pi_cloud_instance_id = var.cloud_instance_id
-#   pi_volume_name       = var.volume_name
-#   pi_volume_type       = var.volume_type
-#   pi_volume_size       = var.volume_size
-#   pi_volume_shareable  = var.volume_shareable
-# }
+resource "ibm_pi_volume" "volume" {
+  pi_cloud_instance_id = var.cloud_instance_id
+  pi_volume_name       = var.volume_name
+  pi_volume_type       = var.volume_type
+  pi_volume_size       = var.volume_size
+  pi_volume_shareable  = var.volume_shareable
+}
 data "ibm_pi_volume" "data_source_volume" {
-  # depends_on = [ibm_pi_volume.volume]
-
+  depends_on = [ibm_pi_volume.volume]
+ 
   pi_cloud_instance_id = var.cloud_instance_id
   pi_volume_name       = var.volume_name
 }
