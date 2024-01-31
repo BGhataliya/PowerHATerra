@@ -80,12 +80,12 @@ variable "network_count" {
 variable "volume_name" {
   description = "Name of the volume"
   type        = string
-  default     = "hdisk1"
+  default     = "hdisk3"
 }
 variable "volume_size" {
   description = "Size of a volume"
   type        = number
-  default     = 2
+  default     = 5
 }
 variable "volume_shareable" {
   description = "Is a volume shareable"
