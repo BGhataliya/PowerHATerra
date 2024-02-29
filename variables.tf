@@ -17,7 +17,7 @@ variable "zone" {
 variable "cloud_instance_id" {
   description = "Cloud Instance ID of Service"
   type        = string
-  default     = "fe725bf6-b430-427d-9804-e2d17894542d"
+  default     = "4948f4b4-5f07-491a-9b98-208ffbdb7acf"
 }
 
 // Image
